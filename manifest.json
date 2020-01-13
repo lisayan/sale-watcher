@@ -2,13 +2,18 @@
     "manifest_version": 2,
     "name": "Sale Watcher",
     "version": "0.1",
+    "permissions": [
+        "bookmarks"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
     "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiWcO1pobQEq32F0jBhWeKdqC7odCvDLKPyGSWmWW0jtzlWHYxlmfF2N5aejRgKZBls8iLYEBHJAbsF1ARM/nQRokNtNuqIWQlwkybNlaE9GsxQIRbO7dWTUbnD8QlG505HDdIZawIdtWNWNecSoo+di0qMBuo6Cu90+/3i/TdYk4MXC+N5weHS9f1MrXozPVicC5pasmxE+KsJxVY+ZUSkQMlyp4fj0UCx22+iqJiE3Ufxn8I4xyc3QuCRFWeL1Q+Y/AIKLqraQ38ET109+c9rAVY1o3ALMDIOqSXBPHx92GSGZ+IrRXIWjJTVyOPuJOyv6+AVQG9LENgAFXkWxl2QIDAQAB",
     "content_scripts": [
         {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": ["content.js"]
+            "matches": ["<all_urls>"],
+            "js": ["jquery-3.4.1.min.js","content.js"]
         }
     ]
 }
